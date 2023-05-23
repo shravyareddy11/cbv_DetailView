@@ -8,7 +8,11 @@
 <form method="POST">
     {% csrf_token %}
 
+    <h1> you want to delete {{sclobject.name}}</h1>
     <input type="submit" value="Yes-Sure-Delete" class="btn btn-danger">
 </form>
-<a href="{% url 'SchoolList' %}">No-Go-Back</a>
+<a href="{% url 'SchoolList' %}">Go-Back-list</a><br>
+<a href="{% url 'Detail' pk=sclobject.pk %}">No go back to detail</a>
+
+
 {% endblock %}
